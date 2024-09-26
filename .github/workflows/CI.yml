@@ -8,7 +8,7 @@ on:
         description: 'Enter image name'
         required: true
         default: ''
-      docker_tag:
+      docker_image_tag:
         description: 'Enter image tag'
         required: true
         default: ''
@@ -38,7 +38,7 @@ jobs:
         with:
           push: false
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ inputs.docker_image }}:${{ inputs.docker_image_tag }}
-          
+
 
       # - name: Run Trivy vulnerability scanner
       #   uses: aquasecurity/trivy-action@0.20.0
